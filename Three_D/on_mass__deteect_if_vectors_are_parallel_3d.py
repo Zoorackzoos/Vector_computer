@@ -1,0 +1,6 @@
+
+from print_list import print_list
+from Three_D.detect_if_vectors_are_perpendicular_3d import detect_if_vectors_are_perpendicular_3d
+from Three_D.detect_if_vectors_are_parallel_3d import detect_if_vectors_are_parallel_3d
+
+
