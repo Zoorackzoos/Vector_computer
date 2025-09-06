@@ -1,50 +1,6 @@
-from print_list import *
-from Three_D.compute_dot_product_3d import *
-from Three_D.detect_if_vectors_are_parallel_3d import *
-from Three_D.detect_if_vectors_are_perpendicular_3d import *
-from Three_D.on_mass__detect_if_vectors_are_perpendicular_3d import *
-from Two_D import *
+from Three_D.obtuse_or_acute_related.on_mass__obtuse_or_acute_detector import on_mass__obtuse_or_acute_detector
+from Three_D.parallel_related.on_mass__deteect_if_vectors_are_parallel_3d import *
 from convert_vector_pairs_to_names import *
-
-def on_mass__detect_if_vectors_are_parallel_3d(vector_matrix, tab_amount):
-    print(f"{tab_amount}on_mass__detect_if_vectors_are_parallel_3d")
-    print(f"{tab_amount}\tvector_matrix:")
-    print_list(list=vector_matrix,tab_amount=(tab_amount+'\t\t'))
-    print()
-    print(f"{tab_amount}\tstarting the \"on_mass__detect_if_vectors_are_parallel_3d\" loop now:")
-
-    parallel_vectors_list = []
-
-    vector_a_index = 0
-    vector_b_index = 0
-
-    for vector_a in vector_matrix:
-        print(f"{tab_amount}\t\t{vector_a}\t\t\t\t\tvector_a_index = {vector_a_index}")
-        for vector_b in vector_matrix[ vector_a_index+1: ]:
-
-            print(f"{tab_amount}\t\t\t{vector_b}\t\t\t\t\t\tvector_b_index = {vector_b_index}")
-
-            temp_result = detect_if_vectors_are_parallel_3d(vector_a=vector_a, vector_b=vector_b, tab_amount=(tab_amount+'\t\t\t'))
-
-            print(f"{tab_amount}\t\t\tback to on_mass__detect_if_vectors_are_parallel_3d 's loop")
-            if temp_result:
-                temp_list = [vector_b, vector_a] #math and it's backwardsness man. without this "b before a" line the output is incorrect
-                if temp_list.reverse() in parallel_vectors_list:
-                    print(f"{tab_amount}\t\t\tNot adding pair to parallel_vectors_list because it is already in.")
-                else:
-                    parallel_vectors_list.append(temp_list)
-                    print(f"{tab_amount}\t\t\tadded pair to parallel_vectors_list")
-            print()
-
-            vector_b_index += 1
-        vector_a_index += 1
-    print(f"{tab_amount}\tend of loop")
-
-    print(f"{tab_amount}\tparallel_vectors_list:")
-    print_list(list=parallel_vectors_list,tab_amount=(tab_amount+'\t\t'))
-
-    return parallel_vectors_list
-
 
 """
 1.3 problem 4 
@@ -88,11 +44,19 @@ def main_function_hehe():
     print_list(list=nameified_pairs_list, tab_amount='')
     """
 
+    """
     parallel_pair_list = on_mass__detect_if_vectors_are_parallel_3d(vector_matrix=my_vectors__vector_matrix,tab_amount="")
     print()
     parallel_pair_list__names = convert_vector_pairs_to_names(vector_pairs_list=parallel_pair_list,vector_name_dict=my_vectors__name_dict)
     print(f"parallel_pair_list__names:")
     print_list(list=parallel_pair_list__names, tab_amount='')
+    """
+
+    obtuse_or_actue_list = on_mass__obtuse_or_acute_detector(vector_matrix=my_vectors__vector_matrix,tab_amount="")
+    obtuse_or_acute_list_names = convert_vector_pairs_to_names(vector_pairs_list=obtuse_or_actue_list,vector_name_dict=my_vectors__name_dict,vector_pairs_type="obtuse_or_acute")
+    print()
+    print("obtuse_or_actue_list__names:")
+    print_list(list=obtuse_or_acute_list_names, tab_amount='')
 
 if __name__ == '__main__':
     main_function_hehe()
