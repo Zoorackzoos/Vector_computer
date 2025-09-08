@@ -2,6 +2,14 @@ def conbine_verticies_3d(vertex_a, vertex_b, tab_amount):
     """
     DE = E - D = ....
 
+    i asked what thhis is called to Du
+    bruh didn't know wtf i was talking about
+    "what do i call it?"
+        "which one is left?"
+    "huh?"
+    gee Thanks Du.
+        moron...
+
     :param vertex_1:
     :param vertex_2:
     :return:
@@ -18,3 +26,9 @@ def conbine_verticies_3d(vertex_a, vertex_b, tab_amount):
 
     temp_list = [temp_x, temp_y, temp_z]
     return temp_list
+
+if __name__ == "__main__":
+    D = [1,2,3]
+    E = [4,5,6]
+
+    conbine_verticies_3d(vertex_a=D, vertex_b=E, tab_amount="")

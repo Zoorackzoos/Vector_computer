@@ -1,5 +1,5 @@
 
-from Three_D.compute_dot_product_3d import compute_dot_product_3d
+from Three_D.dot_product_related.compute_dot_product_3d import dot_product_3d
 
 
 def detect_if_vectors_are_perpendicular_3d(vector_a, vector_b, tab_amount):
@@ -15,7 +15,7 @@ def detect_if_vectors_are_perpendicular_3d(vector_a, vector_b, tab_amount):
     :return:
     """
     print(f"{tab_amount}detect_if_vectors_are_perpendicular_3d")
-    result_of_dot_product = compute_dot_product_3d(vector_a=vector_a, vector_b=vector_b, tab_amount=(tab_amount+'\t'))
+    result_of_dot_product = dot_product_3d(vector_a=vector_a, vector_b=vector_b, tab_amount=(tab_amount + '\t'))
     print(f"{tab_amount}\tresult_of_dot_product = {result_of_dot_product}")
 
     if_zero_bool = result_of_dot_product == 0

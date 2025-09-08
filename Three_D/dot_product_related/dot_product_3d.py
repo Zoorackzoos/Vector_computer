@@ -1,7 +1,7 @@
 
 
 
-def compute_dot_product_3d(vector_a, vector_b, tab_amount):
+def dot_product_3d(vector_a, vector_b, tab_amount):
     """
                            [#,#,#]  [#,#,#]
 
@@ -24,3 +24,9 @@ def compute_dot_product_3d(vector_a, vector_b, tab_amount):
             vector_a[1] * vector_b[1]
             +
             vector_a[2] * vector_b[2])
+
+if __name__ == "__main__":
+    vector_a = [0,0.9,0]
+    vector_b = [0,5,2]
+
+    dot_product_3d(vector_a, vector_b, tab_amount="")

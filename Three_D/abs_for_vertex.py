@@ -11,4 +11,9 @@ def abs_for_vertex(vertex,tab_amount):
 
 if __name__ == "__main__":
     vertex_var = [-4,1,-10]
-    print( abs_for_vertex(vertex=vertex_var,tab_amount="\t"))
+    vertex_var__1_4_4 = [2,-2,-4]
+    vertex_var__1_7_force = [0,5,2]
+
+    vertex_in_question = vertex_var__1_7_force
+
+    print( abs_for_vertex(vertex=vertex_in_question,tab_amount="\t"))
