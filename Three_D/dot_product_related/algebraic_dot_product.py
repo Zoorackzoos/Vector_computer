@@ -1,6 +1,8 @@
 import math
 from sympy import symbols, sqrt, simplify, nsimplify
 
+from convert_to_divided_by_sqrt import convert_to_divided_by_sqrt
+
 
 def algebraic_dot_product(vertex_a, vertex_b, tab_amount):
     """
@@ -43,50 +45,39 @@ def algebraic_dot_product(vertex_a, vertex_b, tab_amount):
     k_component = (vertex_a[0] * vertex_b[1]) - (vertex_a[1] * vertex_b[0])
     print(f"{tab_amount}\t\t\t\t{k_component}")
 
-
-    i_component = nsimplify(i_component,rational=True)
-    j_component = nsimplify(j_component,rational=True)
-    k_component = nsimplify(k_component,rational=True)
-
-    i_component = simplify(i_component)
-    j_component = simplify(j_component)
-    k_component = simplify(k_component)
-
+    i_component, j_component, k_component = sqrt_checker_funciton(i_component, j_component, k_component, tab_amount=tab_amount+'\t')
 
     output_list = [i_component, j_component, k_component]
     return output_list
 
+
+def sqrt_checker_funciton(i_component, j_component, k_component, tab_amount):
+    print(f"{tab_amount}sqrt_checker_funciton")
+    i_component_unsimplified = convert_to_divided_by_sqrt(i_component,tab_amount=tab_amount+'\t')
+    j_component_unsimplified = convert_to_divided_by_sqrt(j_component,tab_amount=tab_amount+'\t')
+    k_component_unsimplified = convert_to_divided_by_sqrt(k_component,tab_amount=tab_amount+'\t')
+    if i_component_unsimplified != None:
+        i_component = i_component_unsimplified
+    if j_component_unsimplified != None:
+        j_component = j_component_unsimplified
+    if k_component_unsimplified != None:
+        k_component = k_component_unsimplified
+    return i_component, j_component, k_component
+
+
 if __name__ == '__main__':
 
-    v_in_question = [0,1,0]
-    w_in_question = [ (-9/math.sqrt(2)) , (9/math.sqrt(2)) , 0]
+    v_1 = [1,2,3]
+    w_1 = [4,5,6]
 
-    print( algebraic_dot_product(v_in_question, w_in_question, tab_amount="") )
-    print()
-    print()
-    print()
+    v_2 = [0,1,0]
+    w_2 = [ (-9/math.sqrt(2)) , (9/math.sqrt(2)) , 0]
 
-def convert_poopoo_number_into_peepee_number(number,tab_amount):
-    from sympy import symbols, sqrt, simplify, Rational, nsimplify
+    v_in_question = v_2
+    w_in_question = w_2
 
-    # Input: numerical value
-    num = float(input("Enter the number: "))
-
-    # Try to detect a / sqrt(b) pattern
-    def detect_over_sqrt(x, tolerance=1e-6, max_check=20):
-        for a in range(1, max_check):
-            for b in range(1, max_check):
-                candidate = a / (b ** 0.5)
-                if abs(candidate - x) < tolerance:
-                    return f"{a}/sqrt({b})"
-        return None
-
-    result = detect_over_sqrt(num)
-
-    if result:
-        print("Detected symbolic form:", result)
-    else:
-        print("Could not detect simple a/sqrt(b) form")
+    result = algebraic_dot_product(v_in_question, w_in_question, tab_amount="")
+    print(result)
 
 
 

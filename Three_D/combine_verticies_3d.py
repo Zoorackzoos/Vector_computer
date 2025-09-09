@@ -28,6 +28,7 @@ def conbine_verticies_3d(vertex_a, vertex_b, tab_amount):
     return temp_list
 
 if __name__ == "__main__":
+
     D = [1,2,3]
     E = [4,5,6]
 
