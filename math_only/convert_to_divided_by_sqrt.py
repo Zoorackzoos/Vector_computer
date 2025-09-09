@@ -1,5 +1,5 @@
 from pandas.core.dtypes.inference import is_integer
-from get_decimal_length import get_decimal_length
+from math_only.get_decimal_length import get_decimal_length
 
 #made of sin
 def convert_to_divided_by_sqrt(x,tab_amount, tolerance=1e-6, max_check=20):

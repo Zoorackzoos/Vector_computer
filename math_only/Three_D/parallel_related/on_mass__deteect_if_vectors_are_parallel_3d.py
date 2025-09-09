@@ -1,6 +1,7 @@
 
 from print_list import print_list
-from Three_D.parallel_related import detect_if_vectors_are_parallel_3d
+from math_only.Three_D.parallel_related import detect_if_vectors_are_parallel_3d
+
 
 def on_mass__detect_if_vectors_are_parallel_3d(vector_matrix, tab_amount):
     print(f"{tab_amount}on_mass__detect_if_vectors_are_parallel_3d")
@@ -20,7 +21,7 @@ def on_mass__detect_if_vectors_are_parallel_3d(vector_matrix, tab_amount):
 
             print(f"{tab_amount}\t\t\t{vector_b}\t\t\t\t\t\tvector_b_index = {vector_b_index}")
 
-            temp_result = detect_if_vectors_are_parallel_3d(vector_a=vector_a, vector_b=vector_b, tab_amount=(tab_amount+'\t\t\t'))
+            temp_result = detect_if_vectors_are_parallel_3d(vector_a=vector_a, vector_b=vector_b, tab_amount=(tab_amount + '\t\t\t'))
 
             print(f"{tab_amount}\t\t\tback to on_mass__detect_if_vectors_are_parallel_3d 's loop")
             if temp_result:

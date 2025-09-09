@@ -1,7 +1,6 @@
 import math
-from sympy import symbols, sqrt, simplify, nsimplify
 
-from convert_to_divided_by_sqrt import convert_to_divided_by_sqrt
+from math_only.convert_to_divided_by_sqrt import convert_to_divided_by_sqrt
 
 
 def algebraic_dot_product(vertex_a, vertex_b, tab_amount):
@@ -24,25 +23,25 @@ def algebraic_dot_product(vertex_a, vertex_b, tab_amount):
     print(f"{tab_amount}\t\ti_component = ")
     print(f"{tab_amount}\t\t\t{vertex_a[1]}\t{vertex_a[2]}")
     print(f"{tab_amount}\t\t\t{vertex_b[1]}\t{vertex_b[2]}")
-    print(f"{tab_amount}\t\t\t\t{vertex_a[1]} * {vertex_b[2]} - {vertex_a[2]} * {vertex_b[1]}")
-    print(f"{tab_amount}\t\t\t\t{vertex_a[1] * vertex_b[2]} - {vertex_a[2] * vertex_b[1]}")
-    i_component = (vertex_a[1] * vertex_b[2]) - (vertex_a[2] * vertex_b[1])
+    print(f"{tab_amount}\t\t\t\t{vertex_a[2]} * {vertex_b[1]} - {vertex_a[1]} * {vertex_b[2]}")
+    print(f"{tab_amount}\t\t\t\t{vertex_a[2] * vertex_b[1]} - {vertex_a[1] * vertex_b[2]}")
+    i_component =               (vertex_a[2] * vertex_b[1]  - vertex_a[1] * vertex_b[2])
     print(f"{tab_amount}\t\t\t\t{i_component}")
 
     print(f"{tab_amount}\t\tj_component = ")
     print(f"{tab_amount}\t\t\t{vertex_a[0]}\t{vertex_a[2]}")
     print(f"{tab_amount}\t\t\t{vertex_b[0]}\t{vertex_b[2]}")
-    print(f"{tab_amount}\t\t\t\t-1 * {vertex_a[0]} * {vertex_b[2]} - {vertex_a[2]} * {vertex_b[0]}")
-    print(f"{tab_amount}\t\t\t\t-1 * {vertex_a[0] * vertex_b[2]} - {vertex_a[2] * vertex_b[0]}")
-    j_component = -1 * ( (vertex_a[0] * vertex_b[2]) - (vertex_a[2] * vertex_b[0]) )
+    print(f"{tab_amount}\t\t\t\t-1 * ({vertex_a[2]} * {vertex_b[0]} - {vertex_a[0]} * {vertex_b[2]})")
+    print(f"{tab_amount}\t\t\t\t-1 * ({vertex_a[2] * vertex_b[0]} - {vertex_a[0] * vertex_b[2]})")
+    j_component =             -1 * ( (vertex_a[2] * vertex_b[0]) - (vertex_a[0] * vertex_b[2]) )
     print(f"{tab_amount}\t\t\t\t{j_component}")
 
     print(f"{tab_amount}\t\tk_component = ")
     print(f"{tab_amount}\t\t\t{vertex_a[0]}\t{vertex_a[1]}")
     print(f"{tab_amount}\t\t\t{vertex_b[0]}\t{vertex_b[1]}")
-    print(f"{tab_amount}\t\t\t\t{vertex_a[0]} * {vertex_b[1]} - {vertex_a[1]} * {vertex_b[0]}")
-    print(f"{tab_amount}\t\t\t\t{vertex_a[0] * vertex_b[1]} - {vertex_a[1] * vertex_b[0]}")
-    k_component = (vertex_a[0] * vertex_b[1]) - (vertex_a[1] * vertex_b[0])
+    print(f"{tab_amount}\t\t\t\t{vertex_a[1]} * {vertex_b[0]} - {vertex_a[0]} * {vertex_b[1]}")
+    print(f"{tab_amount}\t\t\t\t{vertex_a[1] * vertex_b[0]} - {vertex_a[0] * vertex_b[1]}")
+    k_component =               (vertex_a[1] * vertex_b[0] - vertex_a[0] * vertex_b[1])
     print(f"{tab_amount}\t\t\t\t{k_component}")
 
     i_component, j_component, k_component = sqrt_checker_funciton(i_component, j_component, k_component, tab_amount=tab_amount+'\t')
@@ -73,8 +72,11 @@ if __name__ == '__main__':
     v_2 = [0,1,0]
     w_2 = [ (-9/math.sqrt(2)) , (9/math.sqrt(2)) , 0]
 
-    v_in_question = v_2
-    w_in_question = w_2
+    v_1_4_8 = [1,3,1]
+    w_1_4_8 = [1,12,1]
+
+    v_in_question = v_1_4_8
+    w_in_question = w_1_4_8
 
     result = algebraic_dot_product(v_in_question, w_in_question, tab_amount="")
     print(result)

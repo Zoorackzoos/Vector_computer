@@ -1,6 +1,6 @@
 from Three_D.dot_product_related.compute_dot_product_3d import dot_product_3d
-from Three_D.combine_verticies_3d import conbine_verticies_3d
-from Three_D.abs_for_vertex import abs_for_vertex
+from math_only.Three_D.combine_verticies_3d import conbine_verticies_3d
+from math_only.Three_D.abs_for_vertex import abs_for_vertex
 
 def compute_angle_from_three_vertexes(vertex_a, vertex_b,vertex_c, tab_amount):
     #   A PRIMARY

@@ -1,6 +1,6 @@
 
 from print_list import print_list
-from Three_D.perpendicular_replated.detect_if_vectors_are_perpendicular_3d import detect_if_vectors_are_perpendicular_3d
+from math_only.Three_D.perpendicular_replated.detect_if_vectors_are_perpendicular_3d import detect_if_vectors_are_perpendicular_3d
 
 def on_mass__detect_if_vectors_are_perpendicular_3d(vector_matrix, tab_amount):
     print(f"{tab_amount}on_mass_detect_if_vectors_are_perpendicular_3d")

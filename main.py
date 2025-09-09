@@ -1,6 +1,5 @@
-from Three_D.obtuse_or_acute_related.on_mass__obtuse_or_acute_detector import on_mass__obtuse_or_acute_detector
-from Three_D.parallel_related.on_mass__deteect_if_vectors_are_parallel_3d import *
-from convert_vector_pairs_to_names import *
+from math_only.Three_D.obtuse_or_acute_related.on_mass__obtuse_or_acute_detector import on_mass__obtuse_or_acute_detector
+from math_only.convert_vector_pairs_to_names import *
 
 """
 1.3 problem 4 

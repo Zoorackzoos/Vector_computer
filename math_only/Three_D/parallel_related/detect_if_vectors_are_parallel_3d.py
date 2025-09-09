@@ -86,3 +86,6 @@ def detect_if_vectors_are_parallel_3d(vector_a, vector_b, tab_amount):
     print(f"{tab_amount}\t{parallelness_bool}")
 
     return parallelness_bool
+
+if __name__ == "__main__":
+    print("nothing's here bro")
