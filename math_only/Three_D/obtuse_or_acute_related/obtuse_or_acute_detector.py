@@ -16,7 +16,7 @@ then tell return if what.
 or whatever >:-/
 """
 
-from Three_D.dot_product_related.compute_dot_product_3d import dot_product_3d
+from math_only.Three_D.product_name_like_related.dot_product_3d import dot_product_3d
 
 #made of sin
 def obtuse_or_acute_detector(vector_a, vector_b, tab_amount=""):

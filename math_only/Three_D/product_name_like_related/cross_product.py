@@ -79,8 +79,11 @@ if __name__ == '__main__':
     v_1_5_7__pq = [1,-2,1]
     w_1_5_7__pr = [-1,0,-1]
 
-    v_in_question = v_1_5_7__pq
-    w_in_question = w_1_5_7__pr
+    v_1_5_8__1 = [3,5,-6]
+    w_1_5_8__2 = [2,1,4]
+
+    v_in_question = v_1_5_8__1
+    w_in_question = w_1_5_8__2
 
     result = cross_product(v_in_question, w_in_question, tab_amount="")
     print(result)

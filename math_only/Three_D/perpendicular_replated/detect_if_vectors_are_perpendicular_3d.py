@@ -3,6 +3,11 @@ from math_only.Three_D.product_name_like_related.dot_product_3d import dot_produ
 
 def detect_if_vectors_are_perpendicular_3d(vector_a, vector_b, tab_amount):
     """
+    if the result of the dot product:
+        is 0:
+            it's perpendicular
+        is not 0:
+            it's not perpendicular
 
     1st return = the numerical result of the dot product
     2nd return = the bool that says if it's perpendicular or not.
