@@ -5,7 +5,7 @@ from math_only.Three_D.combine_vectors_3d import combine_vectors_3d
 from math_only.Three_D.product_name_like_related.dot_product_3d import dot_product_3d
 from math_only.Three_D.product_name_like_related.cross_product import cross_product
 
-def area_of_triangle_with_three_vector_points(vector_a, vector_b, vector_c, tab_amount):
+def area_of_triangle_with_three_vector_points_master(vector_a, vector_b, vector_c, tab_amount):
     """
     P = (0,1,0)
     Q = (1,-1,1)
@@ -71,7 +71,27 @@ def area_of_triangle_with_three_vector_points(vector_a, vector_b, vector_c, tab_
     :param tab_amount:
     :return:
     """
-    print(f"{tab_amount}area_of_triangle_with_three_vector_points")
+    print(f"{tab_amount}area_of_triangle_with_three_vector_points_master")
+    return_value_for_steps_1_2 = area_of_triangle_with_three_vector_points_steps_1_2(vector_a=vector_a, vector_b=vector_b, vector_c=vector_c, tab_amount=tab_amount+"\t")
+    return_value_for_steps_1_2_3_4 = area_of_triangle_with_three_vector_points_steps_3_4(vector_a=return_value_for_steps_1_2, tab_amount=tab_amount+'\t')
+    return return_value_for_steps_1_2_3_4
+
+def area_of_triangle_with_three_vector_points_steps_1_2(vector_a, vector_b, vector_c, tab_amount):
+    """
+
+    this is:
+        1. vector_a + vector_b -> ab
+        2. vector_a + vector_c -> ac
+        3. AB x AC -> AB_AC_corss_producted
+        4. returns AB_AC_corss_producted
+
+    :param vector_a:
+    :param vector_b:
+    :param vector_c:
+    :param tab_amount:
+    :return:
+    """
+    print(f"{tab_amount}area_of_triangle_with_three_vector_points_steps_1_2")
     print(f"{tab_amount}\t1/2 * ( |{vector_a}+{vector_b}| x |{vector_a}+{vector_b}| )")
     print(f"{tab_amount}\t\twe have to get our PQ & PR!")
     PQ = combine_vectors_3d(vector_a=vector_a, vector_b=vector_b, tab_amount=tab_amount + '\t\t\t')
@@ -80,23 +100,50 @@ def area_of_triangle_with_three_vector_points(vector_a, vector_b, vector_c, tab_
     print(f"{tab_amount}\t\tthat was the end of calculating PR")
     print()
     print(f"{tab_amount}\t\ttime to to do PQ x PR!")
-    result_of_cross_product = cross_product(vertex_a=PQ,vertex_b=PR,tab_amount=tab_amount + '\t\t\t')
+    result_of_cross_product = cross_product(vertex_a=PQ, vertex_b=PR, tab_amount=tab_amount + '\t\t\t')
+    return result_of_cross_product
 
-    print(f"{tab_amount}\t\tresult_of_cross_product = {result_of_cross_product}")
+def area_of_triangle_with_three_vector_points_steps_3_4(vector_a, tab_amount):
+    """
+
+    this is:
+        1. AB_AC_corss_producted -> AB_AC_corss_product_ABSified
+        2. shows you AB_AC_corss_product_ABSified should be sqrt-ed
+        3. returns that irrational value.
+
+    it's suggested you input the answer from the terminal lines above
+        use
+            1/2 * sqrt( # )
+        instead of
+            1.42948620496872-0548-39
+                because nobody knows wtf that is bro
+
+    :param vector_a:
+    :param tab_amount:
+    :return:
+    """
+
+    print(f"{tab_amount}area_of_triangle_with_three_vector_points_steps_3_4")
+    print(f"{tab_amount}\t\tresult_of_cross_product = {vector_a}")
     print(f"{tab_amount}\t\ttime to ABSify it / find it's distance.")
-    result_of_cross_product_ABSified = ABS_for_vectors_AKA_distance_formula(vertex=result_of_cross_product,tab_amount=tab_amount + '\t\t\t')
+    result_of_cross_product_ABSified = ABS_for_vectors_AKA_distance_formula(vertex=vector_a,tab_amount=tab_amount + '\t\t\t')
 
     print(f"{tab_amount}\t\tresult_of_cross_product_ABSified = sqrt({result_of_cross_product_ABSified})")
     return_value = 1/2 * math.sqrt( result_of_cross_product_ABSified )
     print(f"your answer = {tab_amount}\t1/2 * sqrt({result_of_cross_product_ABSified})")
     return return_value
 
+
+
+
+
 if __name__ == "__main__":
     P = (0,1,0)
     Q = (1,-1,1)
     R = (-1,1,-1)
 
-    area_of_triangle_with_three_vector_points(vector_a=P, vector_b=Q, vector_c=R, tab_amount='')
+    result = area_of_triangle_with_three_vector_points_master(vector_a=P, vector_b=Q, vector_c=R, tab_amount='')
+    print(result)
 
 
 
