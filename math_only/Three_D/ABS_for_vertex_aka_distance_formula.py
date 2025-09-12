@@ -1,8 +1,8 @@
 import math
 
 
-def abs_for_vertex(vertex,tab_amount):
-    print(f"{tab_amount}abs_for_vertex")
+def ABS_for_vectors_AKA_distance_formula(vertex,tab_amount):
+    print(f"{tab_amount}ABS_for_vectors_AKA_distance_formula")
     print(f"{tab_amount}\tsqrt(x^2 + y^2 + z^2)")
     print(f"{tab_amount}\tsqrt({vertex[0]}^2 + {vertex[1]}^2 + {vertex[2]}^2)")
     print(f"{tab_amount}\tsqrt({math.pow(vertex[0],2)} + {math.pow(vertex[1],2)} + {math.pow(vertex[2],2)})")
@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     vertex_in_question = vertex_var__1_4_8
 
-    print( abs_for_vertex(vertex=vertex_in_question,tab_amount="\t"))
+    print(ABS_for_vectors_AKA_distance_formula(vertex=vertex_in_question, tab_amount="\t"))
