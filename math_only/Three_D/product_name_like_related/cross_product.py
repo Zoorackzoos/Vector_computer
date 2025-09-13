@@ -1,5 +1,6 @@
 import math
 from math_only.number_simplifiers.sqrt_checker_function_ijk_components import sqrt_checker_function_ijk_components
+from math_only.Three_D.combine_vectors_3d import combine_vectors_3d
 
 def cross_product(vertex_a, vertex_b, tab_amount):
     """
@@ -82,12 +83,14 @@ if __name__ == '__main__':
     v_1_5_8__1 = [3,5,-6]
     w_1_5_8__2 = [2,1,4]
 
-    v_in_question = v_1_5_8__1
-    w_in_question = w_1_5_8__2
+    v_1_5_9__1 = [-1,3,-3]
+    w_1_5_9__2 = [3,-2,1]
+
+    v_in_question = v_1_5_9__1
+    w_in_question = w_1_5_9__2
 
     result = cross_product(v_in_question, w_in_question, tab_amount="")
     print(result)
-
 
 
 
