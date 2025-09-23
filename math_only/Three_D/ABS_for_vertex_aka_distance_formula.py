@@ -17,7 +17,9 @@ if __name__ == "__main__":
     vertex_var__1_4_7_force = [0,5,2]
     vertex_var__1_4_8 = [9,0,-9]
     vertex_var__2_5_3 = [12,-4,6]
+    vertex_var__2_5_4 = [1,1,1]
+    vertex_var__2_5_7 = [-1,-2,-1]
 
-    vertex_in_question = vertex_var__2_5_3
+    vertex_in_question = vertex_var__2_5_7
 
     print(ABS_for_vectors_AKA_distance_formula(vertex=vertex_in_question, tab_amount="\t"))
