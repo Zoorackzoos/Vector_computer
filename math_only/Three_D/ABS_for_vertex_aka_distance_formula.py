@@ -2,6 +2,16 @@ import math
 
 
 def ABS_for_vectors_AKA_distance_formula(vertex,tab_amount):
+    """
+    This is also called magnitude. finding magnitude
+    sqrt( #^2 + #^2 + #^2 )
+    fuck the names man.
+
+    :param vertex:
+    :param tab_amount:
+    :return:
+    """
+
     print(f"{tab_amount}ABS_for_vectors_AKA_distance_formula")
     print(f"{tab_amount}\tsqrt(x^2 + y^2 + z^2)")
     print(f"{tab_amount}\tsqrt({vertex[0]}^2 + {vertex[1]}^2 + {vertex[2]}^2)")
