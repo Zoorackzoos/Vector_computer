@@ -55,11 +55,15 @@ def find_equation_for_plane_of_three_vectors(vector_a, vector_b, vector_c, tab_a
     return return_value_string
 
 if __name__ == "__main__":
-    P = [0, 1, 0]
-    Q = [1, -1, 1]
-    R = [-1, 1, -1]
+    review_17_P = [1,2,0]
+    review_17_Q = [1,3,1]
+    review_17_R = [-2,2,4]
 
-    find_equation_for_plane_of_three_vectors(P, Q, R, tab_amount='')
+    P_in_question = review_17_P
+    Q_in_question = review_17_Q
+    R_in_question = review_17_R
+
+    find_equation_for_plane_of_three_vectors(P_in_question, Q_in_question, R_in_question, tab_amount='')
 
 
 

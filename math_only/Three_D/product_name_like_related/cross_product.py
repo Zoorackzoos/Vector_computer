@@ -16,7 +16,7 @@ def cross_product(vertex_a, vertex_b, tab_amount):
             NOT RIGHT TO LEFT
             HOLY FUCK
 
-    B * C - A * D
+    
 
     Rince & repeat until you get x, y & z
 
@@ -86,8 +86,11 @@ if __name__ == '__main__':
     v_1_5_9__1 = [-1,3,-3]
     w_1_5_9__2 = [3,-2,1]
 
-    v_in_question = v_1_5_9__1
-    w_in_question = w_1_5_9__2
+    calc_3_review__15_pq = [2,0,2]
+    calc_3_review__15_pr = [1,-1,1]
+
+    v_in_question = calc_3_review__15_pq
+    w_in_question = calc_3_review__15_pr
 
     result = cross_product(v_in_question, w_in_question, tab_amount="")
     print(result)
