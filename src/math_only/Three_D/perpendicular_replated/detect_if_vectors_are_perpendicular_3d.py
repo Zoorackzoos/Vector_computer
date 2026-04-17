@@ -1,5 +1,5 @@
 
-from math_only.Three_D.product_name_like_related.dot_product_3d import dot_product_3d
+from src.math_only.Three_D.product_name_like_related.dot_product_3d import dot_product_3d
 
 def detect_if_vectors_are_perpendicular_3d(vector_a, vector_b, tab_amount):
     """

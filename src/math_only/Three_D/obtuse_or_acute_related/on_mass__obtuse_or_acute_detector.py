@@ -6,7 +6,7 @@
 
 
 
-from math_only.Three_D.obtuse_or_acute_related.obtuse_or_acute_detector import obtuse_or_acute_detector
+from src.math_only.Three_D.obtuse_or_acute_related.obtuse_or_acute_detector import obtuse_or_acute_detector
 
 #made of sin
 def on_mass__obtuse_or_acute_detector(vector_matrix, tab_amount=""):

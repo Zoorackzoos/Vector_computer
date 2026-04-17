@@ -1,6 +1,6 @@
-from math_only.Three_D.ABS_for_vertex_aka_distance_formula import ABS_for_vectors_AKA_distance_formula
-from math_only.Three_D.product_name_like_related.cross_product import cross_product
-from print_list import print_list
+from src.math_only.Three_D.ABS_for_vertex_aka_distance_formula import ABS_for_vectors_AKA_distance_formula
+from src.math_only.Three_D.product_name_like_related.cross_product import cross_product
+from src.print_list import print_list
 
 def get_perpendicular_vector_from_two_vectors(vector_a,vector_b,tab_amount):
     print(f"{tab_amount}get_perpendicular_vector_from_two_vectors")

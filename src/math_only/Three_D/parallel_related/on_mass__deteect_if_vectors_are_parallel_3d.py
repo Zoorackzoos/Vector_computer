@@ -1,6 +1,6 @@
 
-from print_list import print_list
-from math_only.Three_D.parallel_related import detect_if_vectors_are_parallel_3d
+from src.print_list import print_list
+from src.math_only.Three_D.parallel_related import detect_if_vectors_are_parallel_3d
 
 
 def on_mass__detect_if_vectors_are_parallel_3d(vector_matrix, tab_amount):

@@ -1,9 +1,8 @@
 import math
 
-from math_only.Three_D.ABS_for_vertex_aka_distance_formula import ABS_for_vectors_AKA_distance_formula
-from math_only.Three_D.combine_vectors_3d import combine_vectors_3d
-from math_only.Three_D.product_name_like_related.dot_product_3d import dot_product_3d
-from math_only.Three_D.product_name_like_related.cross_product import cross_product
+from src.math_only.Three_D.ABS_for_vertex_aka_distance_formula import ABS_for_vectors_AKA_distance_formula
+from src.math_only.Three_D.combine_vectors_3d import combine_vectors_3d
+from src.math_only.Three_D.product_name_like_related.cross_product import cross_product
 
 def area_of_triangle_with_three_vector_points_master(vector_a, vector_b, vector_c, tab_amount):
     """

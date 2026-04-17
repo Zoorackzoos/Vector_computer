@@ -1,6 +1,6 @@
 import math
 
-from print_list import print_list
+from src.print_list import print_list
 
 
 def ABS_for_2d_point_AKA_distance_formula(_2d_point, tab_amount):

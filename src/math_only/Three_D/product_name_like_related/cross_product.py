@@ -1,6 +1,6 @@
 import math
-from math_only.number_simplifiers.sqrt_checker_function_ijk_components import sqrt_checker_function_ijk_components
-from math_only.Three_D.combine_vectors_3d import combine_vectors_3d
+from src.math_only.number_simplifiers.sqrt_checker_function_ijk_components import sqrt_checker_function_ijk_components
+
 
 def cross_product(vertex_a, vertex_b, tab_amount):
     """

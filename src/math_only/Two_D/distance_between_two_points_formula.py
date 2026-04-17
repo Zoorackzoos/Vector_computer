@@ -1,5 +1,5 @@
 import math
-from print_list import print_list
+from src.print_list import print_list
 
 
 def distance_between_two_points_formula(_1st_point, _2nd_point, tab_amount):

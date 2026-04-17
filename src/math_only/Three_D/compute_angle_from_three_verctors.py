@@ -1,6 +1,7 @@
-from Three_D.dot_product_related.compute_dot_product_3d import dot_product_3d
-from math_only.Three_D.combine_vectors_3d import combine_vectors_3d
-from math_only.Three_D.ABS_for_vertex_aka_distance_formula import ABS_for_vectors_AKA_distance_formula
+from src.math_only.Three_D.combine_vectors_3d import combine_vectors_3d
+from src.math_only.Three_D.ABS_for_vertex_aka_distance_formula import ABS_for_vectors_AKA_distance_formula
+from src.math_only.Three_D.product_name_like_related.dot_product_3d import dot_product_3d
+
 
 def compute_angle_from_three_vertexes(vertex_a, vertex_b,vertex_c, tab_amount):
     #   A PRIMARY

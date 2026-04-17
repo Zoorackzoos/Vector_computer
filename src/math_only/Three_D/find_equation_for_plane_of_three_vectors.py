@@ -9,7 +9,7 @@
 
 
 
-from math_only.Three_D.area_of_triangle_with_three_vector_points import area_of_triangle_with_three_vector_points_steps_1_2
+from src.math_only.Three_D.area_of_triangle_with_three_vector_points import area_of_triangle_with_three_vector_points_steps_1_2
 
 def find_equation_for_plane_of_three_vectors(vector_a, vector_b, vector_c, tab_amount):
     print(f"{tab_amount}find_equation_for_plane_of_three_vectors")

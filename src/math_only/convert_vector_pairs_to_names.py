@@ -4,7 +4,6 @@
 only works with parallel & perpenduclar
 """
 
-from print_list import print_list
 
 #made of sin
 def convert_vector_pairs_to_names(vector_pairs_list, vector_name_dict, vector_pairs_type):

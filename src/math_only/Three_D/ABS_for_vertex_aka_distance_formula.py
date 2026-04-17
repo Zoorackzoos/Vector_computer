@@ -1,9 +1,9 @@
 import math
 
-from print_list import print_list
+from src.print_list import print_list
 
 
-def ABS_for_vectors_AKA_distance_formula(vertex,tab_amount):
+def ABS_for_vectors_AKA_distance_formula(vertex,tab_amount="\t"):
     """
     This is also called magnitude. finding magnitude
     sqrt( #^2 + #^2 + #^2 )
